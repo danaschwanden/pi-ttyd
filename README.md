@@ -51,7 +51,7 @@ cd pi-ttyd
 ./run.sh
 ```
 
-![Access Agent](./images/pi_agent.png)
+![Access Agent](./images/pi-agent.png)
 
 ## Optimise your Setup
 
