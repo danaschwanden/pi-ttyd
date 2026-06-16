@@ -1,4 +1,4 @@
-# Pi - local agent harness
+# Pi - Local Agent Harness
 
 Run the [Pi](https://pi.dev/) agent harness locally in [Docker](https://www.docker.com/) and [LM Studio](https://lmstudio.ai/) via [ttyd](https://github.com/tsl0922/ttyd) in your browser - completely private and offline.
 
