@@ -57,7 +57,7 @@ cd pi-ttyd
 
 Once you have your setup running you can optimise your your Pi agent harness by tuning the files in the [`agent folder`](./pi-data/agent) following the [Pi online docs](https://pi.dev/docs/latest).
 
-For example you can change the Model configuration in the [`models.json`](../pi-data/agent/models.json) file.
+For example you can change the Model configuration in the [`models.json`](./pi-data/agent/models.json) file.
 
 ## Workspace
 
