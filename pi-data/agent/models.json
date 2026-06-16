@@ -7,12 +7,25 @@
       "models": [
         {
           "id": "google/gemma-4-26b-a4b",
-          "input": [
-            "text",
-            "image"
-          ]
+          "name": "Gemma 4 (Local)",
+          "input": ["text", "image"],
+          "contextWindow": 128000,
+          "maxTokens": 32768
         }
       ]
-    }
+    },
+//    "vllm": {
+//      "baseUrl": "http://spark.local:8000/v1",
+//      "api": "openai-completions",
+//      "apiKey": "vllm",
+//      "models": [
+//        {
+//          "id": "nvidia/diffusiongemma-26B-A4B-it-NVFP4",
+//          "name": "DiffusionGemma (vLLM)",
+//          "contextWindow": 262144,
+//          "maxTokens": 32768
+//        }
+//      ]
+//    }
   }
 }
