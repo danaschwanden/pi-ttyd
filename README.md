@@ -1,6 +1,6 @@
 # Pi - Local Agent Harness
 
-Run the [Pi](https://pi.dev/) agent harness locally in [Docker](https://www.docker.com/) with [LM Studio](https://lmstudio.ai/) via [ttyd](https://github.com/tsl0922/ttyd) in your browser - completely private and offline.
+Run the [Pi](https://pi.dev/) agent harness locally in [Docker](https://www.docker.com/) with [LM Studio](https://lmstudio.ai/) via [ttyd](https://github.com/tsl0922/ttyd) in your browser - completely privately and offline.
 
 > [!NOTE]
 > The procedure described below is intended and tested to work on a MacBook.
@@ -37,12 +37,12 @@ After you have both Docker and LM Studio installed and running follow the setup 
 
 ## Getting started
 
-The four easy steps outlined below will open a browser window (see below) from where you can interact with the Pi agent harness.
+Executing the four steps outlined below will present you with a new browser window (see screen shot below) from where you can interact with the Pi agent harness.
 
 > [!NOTE]
 > You can run multiple Pi agent harnesses in parallel by executing `run.sh` as many times as suits your needs.
 >
-> Every `run.sh` execution starts a new container instance running on its own port and browser window.
+> Every `run.sh` execution starts a new container instance running on a dedicated port and its own browser tab.
 > You can still collaborate between the Pi agent harness instances and/or your laptop via the mounted [`workspace`](./workspace) folder.
 
 ```bash
@@ -65,7 +65,7 @@ cd pi-ttyd
 
 Once you have your setup running you can optimise your your Pi agent harness by tuning the files in the [`agent folder`](./pi-data/agent) following the [Pi online docs](https://pi.dev/docs/latest).
 
-For example you can change the Model configuration in the [`models.json`](./pi-data/agent/models.json) file.
+For example, you can change the Model configuration in the [`models.json`](./pi-data/agent/models.json) file.
 
 ## Workspace
 
