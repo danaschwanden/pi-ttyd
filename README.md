@@ -42,7 +42,8 @@ The four easy steps outlined below will open a browser window (see below) from w
 > [!NOTE]
 > You can run multiple Pi agent harnesses in parallel by executing `run.sh` as many times as suits your needs.
 >
-> Every `run.sh` execution starts a new container instance running on its own port and browser window. You can still collaborate between the Pi agent harness instances and your laptop via the mounted [`workspace`](./workspace) folder.
+> Every `run.sh` execution starts a new container instance running on its own port and browser window.
+> You can still collaborate between the Pi agent harness instances and/or your laptop via the mounted [`workspace`](./workspace) folder.
 
 ```bash
 # Clone this repo
@@ -54,7 +55,7 @@ cd pi-ttyd
 # Build the Docker image - run occassionally to update to latest versions
 ./build.sh
 
-# Run the Docker image - this will start on a new port and open a new browser window for every run
+# Run the Docker image - this will start on a new port and open a new browser tab for every run
 ./run.sh
 ```
 
@@ -72,7 +73,7 @@ Your Pi agent will mount the [`workspace`](./workspace) folder. This will allow 
 
 ## Cleaning up
 
-When you are done you can clena up by stopping (and removing) all the Pi agent harness container instances by running the command below:
+When you are done you can clean up by stopping (and removing) all the Pi agent harness container instances by running the command below:
 
 ```bash
 docker stop $(docker ps -q --filter "name=pi-ttyd-*")
