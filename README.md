@@ -1,6 +1,6 @@
 # Pi - Local Agent Harness
 
-Run the [Pi](https://pi.dev/) agent harness locally in [Docker](https://www.docker.com/) and [LM Studio](https://lmstudio.ai/) via [ttyd](https://github.com/tsl0922/ttyd) in your browser - completely private and offline.
+Run the [Pi](https://pi.dev/) agent harness locally in [Docker](https://www.docker.com/) with [LM Studio](https://lmstudio.ai/) via [ttyd](https://github.com/tsl0922/ttyd) in your browser - completely private and offline.
 
 > [!NOTE]
 > The procedure described below is intended and tested to work on a MacBook.
@@ -37,6 +37,13 @@ After you have both Docker and LM Studio installed and running follow the setup 
 
 ## Getting started
 
+The four easy steps outlined below will open a browser window (see below) from where you can interact with the Pi agent harness.
+
+> [!NOTE]
+> You can run multiple Pi agent harnesses in parallel by executing `run.sh` as many times as suits your needs.
+>
+> Every `run.sh` execution starts a new container instance running on its own port and browser window. You can still collaborate between the Pi agent harness instances and your laptop via the mounted [`workspace`](./workspace) folder.
+
 ```bash
 # Clone this repo
 git clone https://github.com/danaschwanden/pi-ttyd.git
@@ -44,10 +51,10 @@ git clone https://github.com/danaschwanden/pi-ttyd.git
 # Change to the repo folder
 cd pi-ttyd
 
-# Build the Docker image
+# Build the Docker image - run occassionally to update to latest versions
 ./build.sh
 
-# Run the Docker image - this will start on a new port for every run
+# Run the Docker image - this will start on a new port and open a new browser window for every run
 ./run.sh
 ```
 
@@ -62,3 +69,11 @@ For example you can change the Model configuration in the [`models.json`](./pi-d
 ## Workspace
 
 Your Pi agent will mount the [`workspace`](./workspace) folder. This will allow you to share the artifacts between different agent instances as well as access them from your local machine.
+
+## Cleaning up
+
+When you are done you can clena up by stopping (and removing) all the Pi agent harness container instances by running the command below:
+
+```bash
+docker stop $(docker ps -q --filter "name=pi-ttyd-*")
+```
